@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>DeepSeek Harness</title><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
+<body>
+<main>
+  <header><div class="brand"><span class="symbol" aria-hidden="true">◆</span><strong>DeepSeek Harness</strong></div><label class="device-label" for="device">设备</label><select id="device" aria-label="运行 dsh 的设备"><option>正在读取设备…</option></select><button id="refresh" type="button" title="刷新设备列表" aria-label="刷新设备列表">↻</button><button id="connect" type="button" disabled>连接</button><span id="status" role="status">正在检查</span></header>
+  <section id="welcome"><div class="intro"><span class="eyebrow">在设备上运行本机 dsh</span><h1>DeepSeek Harness，放到网页上。</h1><p>连接已配对设备上运行的 <code>dsh web</code>，使用它自己的界面、会话与工具。dsh 只在设备回环监听，网页访问由 AIO 鉴权。</p><div class="steps"><span>1</span><p>在设备安装 dsh：<code>npm i -g @deepseek-ai/dsh</code></p><span>2</span><p>在设备运行 <code>aio device dsh-enable</code><button id="copy" type="button">复制</button></p><span>3</span><p>在上方选择设备并连接。</p></div><p id="error" role="alert"></p></div></section>
+  <iframe id="view" title="DeepSeek Harness 界面" sandbox="allow-scripts" referrerpolicy="no-referrer" hidden></iframe>
+</main>
+</body></html>
